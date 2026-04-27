@@ -18,7 +18,7 @@ Entry point for the Ballerina healthcare skill set. Answers **"I want to do X �
 | Build a US Core Patient API | `fhir-r4-development` → `implementation-guides` → `parser-and-validator` → `healthcare-api-development` → `security-and-authz` → `configuration-best-practices` |
 | Convert HL7 v2 ADT to FHIR | `hl7-v2-integration` → `data-transformation` → `fhir-r4-development` |
 | Build a CDS Hooks service | `clinical-decision-support` → `health-tool-cli` → `configuration-best-practices` |
-| Connect to Epic / Cerner / athenahealth | `emr-ehr-connectivity` → `prebuilt-services` → `security-and-authz` |
+| Connect to Epic / Cerner / athenahealth | `emr-ehr-connectivity` → `prebuilt-services` (auth is built into the connectors — just configure it) |
 | Bulk export from a FHIR server | `emr-ehr-connectivity` → `configuration-best-practices` |
 | Ingest a C-CDA document | `ccda-documents` → `data-transformation` → `fhir-r4-development` |
 | Parse DICOM + expose DICOMweb | `dicom-integration` → `healthcare-api-development` |

@@ -72,12 +72,14 @@ Configure authentication for FHIR server connections including OAuth2, SMART on 
 
 Pre-built connectors live in the **`health.fhir.templates`** repository, not a separate clients module. Import the vendor-specific template package for your target EMR.
 
+**Authentication is already wired into these connectors** — Epic uses PKJWT backend services, Cerner uses system/user scopes, athenahealth uses its practice-management auth. You do not need to layer `security-and-authz` on top; just supply the connector's required credentials/keys via `Config.toml` (see `configuration-best-practices`).
+
 **Supported EMR Systems:**
 | EMR System | Template Package | Capabilities |
 |---|---|---|
-| Epic | `health.fhir.templates/epic` | FHIR R4 API, PKJWT backend auth, patient/clinical/diagnostic/financial/medications/workflow |
-| Cerner (Oracle Health) | `health.fhir.templates/cerner` | FHIR R4 API, system/user scopes |
-| athenahealth | `health.fhir.templates/athena` | FHIR R4 API, practice management |
+| Epic | `health.fhir.templates/epic` | FHIR R4 API, PKJWT backend auth (built-in), patient/clinical/diagnostic/financial/medications/workflow |
+| Cerner (Oracle Health) | `health.fhir.templates/cerner` | FHIR R4 API, system/user scopes (built-in) |
+| athenahealth | `health.fhir.templates/athena` | FHIR R4 API, practice management auth (built-in) |
 
 **Epic 6-domain prebuilt connectors** (WSO2 Open Healthcare Prebuilt Services):
 
@@ -93,7 +95,7 @@ Pre-built connectors live in the **`health.fhir.templates`** repository, not a s
 See `prebuilt-services` for deployment.
 
 **Key Concepts:**
-- EMR-specific authentication flows (Epic's PKJWT backend services, Cerner's system scopes)
+- EMR-specific auth is preconfigured inside each template — only credential/key configuration is required
 - EMR-specific FHIR profile handling
 - Handling EMR-specific extensions and custom operations
 - Integration with non-FHIR EMR APIs via OpenAPI connectors
