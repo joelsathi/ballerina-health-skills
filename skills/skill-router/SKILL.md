@@ -104,6 +104,19 @@ Entry point for the Ballerina healthcare skill set. Answers **"I want to do X �
 
 ---
 
+## Build Verification
+
+Always verify your work compiles cleanly before reporting a task complete:
+
+1. Run `bal build` in the project directory.
+2. If there are compilation errors or warnings, **fix them** — do not leave them for the user.
+3. Re-run `bal build` after fixes to confirm a clean build.
+4. Only report the task as done once `bal build` succeeds without errors.
+
+This applies to every skill in this collection — generated packages, FHIR APIs, CDS services, transformations, and connectors all must build successfully.
+
+---
+
 ## Anti-Patterns
 
 | Don't | Do |

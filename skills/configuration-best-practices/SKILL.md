@@ -25,7 +25,7 @@ Ballerina modules expose configurable values under their module path. For the `h
 - One Config.toml per Ballerina project root.
 - Load order: `Config.toml` → env vars → CLI `-Ckey=value` overrides.
 - Use `${ENV_VAR}` for any secret.
-- Keep a `Config.toml.template` in git with placeholder values; keep `Config.toml` git-ignored.
+- Keep `Config.toml` git-ignored.
 
 ---
 
@@ -219,7 +219,6 @@ Never use `allowedOrigins = ["*"]` in production.
 **Required practices:**
 - `${ENV_VAR}` interpolation for passwords, API keys, cert paths.
 - `.gitignore` entries: `Config.toml`, `Config.*.toml`, `.env`.
-- Commit a redacted `Config.toml.template` with placeholder values.
 - Use a secrets manager (Vault / AWS Secrets Manager / Choreo Secrets) in production — inject as env vars at boot.
 
 **Per-environment layering:**
