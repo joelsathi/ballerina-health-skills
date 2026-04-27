@@ -115,6 +115,8 @@ Always verify your work compiles cleanly before reporting a task complete:
 
 This applies to every skill in this collection — generated packages, FHIR APIs, CDS services, transformations, and connectors all must build successfully.
 
+**Note:** Do not manually edit `Ballerina.toml` to add dependencies. Running `bal build` automatically resolves and updates it with the required dependency entries.
+
 ---
 
 ## Anti-Patterns
