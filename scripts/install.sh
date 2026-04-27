@@ -14,13 +14,13 @@
 #   --help      Print this message.
 #
 # Can be piped from curl:
-#   curl -fsSL https://raw.githubusercontent.com/joelsathi/ballerina-healthcare-skills/main/scripts/install.sh \
+#   curl -fsSL https://raw.githubusercontent.com/joelsathi/ballerina-health-skills/main/scripts/install.sh \
 #     | bash -s fhir-r4-development hl7-v2-integration
 
 set -euo pipefail
 
-REPO_URL="https://github.com/joelsathi/ballerina-healthcare-skills.git"
-REPO_RAW_BASE="https://raw.githubusercontent.com/joelsathi/ballerina-healthcare-skills/main"
+REPO_URL="https://github.com/joelsathi/ballerina-health-skills.git"
+REPO_RAW_BASE="https://raw.githubusercontent.com/joelsathi/ballerina-health-skills/main"
 DEST="${HOME}/.claude/skills"
 ALL=0
 LIST=0

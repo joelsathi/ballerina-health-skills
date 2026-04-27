@@ -13,7 +13,7 @@ Three ways, pick whichever fits. After installing, restart Claude Code so it dis
 ### Option A — Convenience script
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/joelsathi/ballerina-healthcare-skills/main/scripts/install.sh \
+curl -fsSL https://raw.githubusercontent.com/joelsathi/ballerina-health-skills/main/scripts/install.sh \
   | bash -s fhir-r4-development hl7-v2-integration
 ```
 
@@ -23,8 +23,8 @@ Pass any number of skill names. Use `--all` to install everything, or `--project
 
 ```bash
 git clone --filter=blob:none --no-checkout \
-  https://github.com/joelsathi/ballerina-healthcare-skills.git
-cd ballerina-healthcare-skills
+  https://github.com/joelsathi/ballerina-health-skills.git
+cd ballerina-health-skills
 git sparse-checkout init --cone
 git sparse-checkout set skills/fhir-r4-development skills/hl7-v2-integration
 git checkout
